@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- js bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <!-- custom js -->
+    <script src="js/serviceSlider.js" defer></script>
+    <script src="js/ourTeamSlider.js" defer></script>
+    <script src="js/anchors.js" defer></script>
+</head>
+<body>
+    <header class="header anchors-section" id="home">
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <div class="container navbar__content">
+              <a class="navbar-brand" href="#"><img src="img/navbarLogo.png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav scrollspy-items">
+                  <li class="nav-item">
+                    <a class="nav-link scrollspy-item" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link scrollspy-item" href="#service">Service</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link scrollspy-item" href="#extension">Extension</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link scrollspy-item" href="#pricing">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link scrollspy-item" href="#help">Help</a>
+                  </li>
+                </ul>
+
+                <div class="navbar__sign-up">
+                    <span class="btnAnim" type="button" data-bs-toggle="modal" data-bs-target="#sign-up__modal">sign up</span>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <!-- sign up Modal -->
+        <div class="modal fade" id="sign-up__modal" tabindex="-1" aria-labelledby="sign-up__modal" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Sorry, i don't know PHP...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn modal-close__footer" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="header__content row">
+            <div class="left col-md-6 col-sm-12">
+              <h1 class="header__title">LOREM IPSUM<br>DOLOR SIT AMET</h1>
+              <p class="header__text">
+                Lorem ipsum dolor sit amet consectetur Ducimus nesciunt autem error officiis deleniti soluta sed excepturi expedita, quibusdam commodi eius voluptas explicabo! Itaque, quos.
+              </p>
+  
+              <div class="header__buy-btn header-btn" data-bs-toggle="modal" data-bs-target="#buy-now__modal">BUY NOW</div>
+              <div class="header__try-btn header-btn" data-bs-target="#try-now__modal" data-bs-toggle="modal">TRY NOW FREE</div>
+            </div>
+  
+            <div class="right col-md-6 col-sm-12">
+              <a href="https://youtu.be/dQw4w9WgXcQ"><img src="img/headerVideo.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- buy noow modal -->
+        <div class="modal fade" id="buy-now__modal" tabindex="-1" aria-labelledby="buy-now__modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h3>Choose product you want to buy</h3>
+                <form>
+                  <div class="modal-buy__option">
+                    <input id="option1" type="radio" name='buy-product' value="0" checked>
+                    <label for='option1'> Option 1(10$)</label>
+                  </div>
+                  <div class="modal-buy__option">
+                    <input id="option2" type="radio" name='buy-product' value="1" >
+                    <label for='option2'> Option 2(30$)</label>
+                  </div>
+                  <div class="modal-buy__option">
+                    <input id="option3" type="radio" name='buy-product' value="2" >
+                    <label for='option3'> Option 3(50$)</label>
+                  </div>
+
+                  <div class="modal-email modal-buy__email">
+                    <input type="email" name="" id="" placeholder="Enter Your Email">
+                    <span class="error">E-mail must be correct.</span>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn modal-close__footer" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn modal-buy__footer modal-footer-close">Buy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- try now modal -->
+        <div class="modal fade" id="try-now__modal" tabindex="-1" aria-labelledby="try-now__modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <h3>Type your E-mail to get 30 days free period.</h3>
+                <form>
+                  <div class="modal-email">
+                    <input type="email" name="" id="" placeholder="Enter Your Email">
+                    <span class="error">E-mail must be correct.</span>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn modal-close__footer" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn modal-try__footer modal-footer-close">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+
+    <!-- all modal logic -->
+    <script>
+      
+      let buyBtn = document.querySelector('.modal-buy__footer');
+      let buyModalEmail = document.querySelector('.modal-buy__email input');
+      let optionCheckedInput = document.querySelectorAll('.modal-buy__option input');
+      let modalAll = document.querySelectorAll('.modal');
+
+      modalAll.forEach(el => {
+        el.addEventListener('click' , function(e) {
+          // create instanse
+          let newModal = document.querySelector(`#${el.id}`)
+          let modalInstance = bootstrap.Modal.getInstance(newModal);
+
+          // buy btn click
+          if (e.target.classList.contains('modal-buy__footer') && buyModalEmail.value.includes('@')) {
+            let output = [];
+
+            optionCheckedInput.forEach(el => {
+              if (el.checked) output.push(el);
+            })
+            output.push(buyModalEmail.value);
+
+            buyModalEmail.value = '';
+            optionCheckedInput.forEach(el => {
+              el.checked = false;
+            })
+            optionCheckedInput[0].checked = true;
+
+            modalInstance.hide();
+
+            // hide error span
+            el.querySelector('.modal-body .error').style.opacity = 0;
+
+          } else if (e.target.classList.contains('modal-close__footer') || e.target.classList.contains('modal')) {
+            // clear content if close
+            el.querySelector('.modal-body .modal-email input').value = '';
+            optionCheckedInput.forEach(el => {
+              el.checked = false;
+            })
+            optionCheckedInput[0].checked = true;
+
+            // hide error span
+            el.querySelector('.modal-body .error').style.opacity = 0;
+
+          } else if (e.target.classList.contains('modal-try__footer') && el.querySelector('.modal-body .modal-email input').value.includes('@')) {
+            // try modal
+            el.querySelector('.modal-body .modal-email input').value = '';
+            el.querySelector('.modal-body .error').style.opacity = 0;
+            modalInstance.hide();
+          } else if (e.target.classList.contains('modal-footer-close')) {
+            // if email is empty
+            el.querySelector('.modal-body .error').style.opacity = 1;
+          }
+        });
+      })
+
+    </script>
+
+    <!-- navbar adaptive -->
+    <script>
+      let navbar = document.querySelector('.navbar');
+
+      if (window.innerWidth > 992) {
+        window.addEventListener('scroll' , (e) => {
+          if (pageYOffset > 50) {
+            navbar.classList.add('navbar-scrolled');
+          } else {
+            navbar.classList.remove('navbar-scrolled');
+          }
+        })
+      }
+    </script>
+
+    <!-- burger -->
+    <script>
+      if (window.innerWidth < 992) {
+        let menu = document.querySelector('.navbar-toggler');
+        let menuBox = document.querySelector('.navbar-collapse');
+        let menuBoxItems = document.querySelectorAll('.nav-item');
+
+        menuBoxItems.forEach(current => {
+            current.onclick = () => {
+                menuBox.classList.remove('show');
+                document.body.classList.remove('overflow-hidden');
+                menu.classList.toggle('_active');
+            }
+        });
+
+        menu.onclick = menuOpen;
+
+        function menuOpen(e) {
+          menu.disabled = true;
+          setTimeout(() => {
+            menu.disabled = false;
+          }, 300);
+
+          e.preventDefault();
+          document.body.classList.toggle('overflow-hidden');
+          menu.classList.toggle('_active');
+        }
+      }
+  </script>
+
+  <main>
+    <section class="section project-management anchors-section" id="service">
+      <div class="container">
+        <div class="section-title project-management__title row">
+          <h3>Easy & Useful</h3>
+          <h5>Project Managament Tool</h5>
+          <p>Lorem ipsum, elit. Culpa harum doloribus voluptatum odit, aset saepe ipsam fugiat aut dolores iusto quasi illum quas at quibusdam architecto provident vel.</p>
+        </div>
+  
+        <div class="project-management__cards row">
+          <div class="project-management__card col-md-3 col-sm-12">
+            <img src="img/project-management-img1.png" alt="">
+            <p class="project-management__card-title">Title Goes Here</p>
+            <span class="project-management__card-text">Lorem ipsum dolor sit, consectetur adipisicing elit. Quidem dolore quas ratione similique  corrupti. Tempora error voluptatibus nisi id.</span>
+          </div>
+          <div class="project-management__card col-md-3 col-sm-12">
+            <img src="img/project-management-img2.png" alt="">
+            <p class="project-management__card-title">Title Goes Here</p>
+            <span class="project-management__card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dolore quas ratione similique adipisci corrupti. Tempora error voluptatibus nisi id.</span>
+          </div>
+          <div class="project-management__card col-md-3 col-sm-12">
+            <img src="img/project-management-img3.png" alt="">
+            <p class="project-management__card-title">Title Goes Here</p>
+            <span class="project-management__card-text">Lorem ipsum dolor sit amet, adipisicing elit. Quidem dolore quas  similique adipisci corrupti. Tempora error voluptatibus nisi id.</span>
+          </div>
+        </div>
+  
+        <div class="project-management__btn get-started-btn">
+          <span data-bs-toggle="modal" data-bs-target="#buy-now__modal">GET STARTED</span>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="project-management__list row">
+          <div class="project-management__item col-sm-12 col-md-6 col-xl-3 aqua">
+            <img src="img/project-management-line1.png" alt="">
+            <div class="right">
+              <span>12000+<br>Business</span>
+            </div>
+          </div>
+          <div class="project-management__item col-sm-12 col-md-6 col-xl-3 blue">
+            <img src="img/project-management-line2.png" alt="">
+            <div class="right">
+              <span>6000+<br>Downloads</span>
+            </div>
+          </div>
+          <div class="project-management__item col-sm-12 col-md-6 col-xl-3 violet">
+            <img src="img/project-management-line3.png" alt="">
+            <div class="right">
+              <span>30000+<br>Free Installs</span>
+            </div>
+          </div>
+          <div class="project-management__item col-sm-12 col-md-6 col-xl-3 pink">
+            <img src="img/project-management-line4.png" alt="">
+            <div class="right">
+              <span>40000+<br>Pro Users</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services anchors-section" id="extension">
+      <div class="container">
+        <div class="section-title services__title row">
+          <h3>Services</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis omnis iste eveniet, molestiae veniam repudiandae.</p>
+        </div>
+
+        <div class="services__accordion accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <img src="img/accordion-title1.png" alt=""> STATISTICS
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <img src="img/accordion-item-img.png" alt="">
+                <div class="text">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam veritatis saepe incidunt eius recusandae velit quis provident accusamus doloremque et.</p>
+                  <br>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam incidunt sit dicta aut a.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <img src="img/accordion-title2.png" alt=""> INBOX
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <img src="img/accordion-item-img.png" alt="">
+                <div class="text">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam veritatis saepe incidunt eius recusandae velit quis provident accusamus doloremque et.</p>
+                  <br>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam incidunt sit dicta aut a.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <img src="img/accordion-title3.png" alt=""> TEAM
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <img src="img/accordion-item-img.png" alt="">
+                <div class="text">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam veritatis saepe incidunt eius recusandae velit quis provident accusamus doloremque et.</p>
+                  <br>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam incidunt sit dicta aut a.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                <img src="img/accordion-title4.png" alt=""> SETTINGS
+              </button>
+            </h2>
+            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <img src="img/accordion-item-img.png" alt="">
+                <div class="text">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam veritatis saepe incidunt eius recusandae velit quis provident accusamus doloremque et.</p>
+                  <br>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam incidunt sit dicta aut a.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFour">
+                <img src="img/accordion-title5.png" alt=""> FEED
+              </button>
+            </h2>
+            <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <img src="img/accordion-item-img.png" alt="">
+                <div class="text">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam veritatis saepe incidunt eius recusandae velit quis provident accusamus doloremque et.</p>
+                  <br>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo aliquam incidunt sit dicta aut a.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid services-slider">
+        <div class="container" style="height: 100%;">
+          <div class="services__slider row" style="height: 100%;">
+            <div class="col-lg-5 col-sm-12 text-left">
+              <h3 class="services-slider__title">What our customers have to say about us.</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis perferendis magni, ipsa repudiandae fugiat neque!</p>
+              <div class="services-slider__btn get-started-btn">
+                <span data-bs-toggle="modal" data-bs-target="#buy-now__modal">GET STARTED</span>
+              </div>
+            </div>
+  
+            <div class="col-lg-7 col-sm-12 services-slider__slider servicesSlider">
+              <div class="servicesSlider__prev"><img src="img/services-slider-prev.png" alt=""></div>
+              <div class="servicesSlider__container">
+                <div class="servicesSlider__slide" style="margin-top:0;">
+                  <img src="img/slider-item-img1.png" alt="">
+                  <div class="text">
+                    <h4>John Doe</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facilis nisi, iure eveniet nobis provident accusantium aut voluptatibus hic maiores esse ipsa quos. Atque ad omnis necessitatibus laudantium repellat veniam.</p>
+                  </div>
+                </div>
+
+                <div class="servicesSlider__slide">
+                  <img src="img/slider-item-img2.png" alt="">
+                  <div class="text">
+                    <h4>Khalessi</h4>
+                    <p>Lorem ipsum dolor sit amet  adipisicing elit. Fuga facilis nisi, iure eveniet nobis provident accusantium aut voluptatibus hic maiores esse ipsa quos. Atque ad omnis necessitatibus laudantium repellat veniam.</p>
+                  </div>
+                </div>
+
+                <div class="servicesSlider__slide">
+                  <img src="img/slider-item-img1.png" alt="">
+                  <div class="text">
+                    <h4>John Doe</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga facilis nisi, iure eveniet nobis provident accusantium aut voluptatibus hic maiores esse ipsa quos. Atque ad omnis necessitatibus laudantium repellat veniam.</p>
+                  </div>
+                </div>
+
+                <div class="servicesSlider__slide">
+                  <img src="img/slider-item-img2.png" alt="">
+                  <div class="text">
+                    <h4>Khalessi</h4>
+                    <p>Lorem ipsum dolor sit amet ovident accusantium aut voluptatibus hic. Atque ad omnis necessitatibus laudantium repellat veniam.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="servicesSlider__next _active"><img src="img/services-slider-prev.png" alt=""></div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section our-team anchors-section" id="pricing">
+      <div class="container">
+        <div class="section-title our-team__title row">
+          <h3>Our Team</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate ducimus exercitationem suscipit veniam non!</p>
+        </div>
+
+        <div class="our-team-slider">
+          <div class="our-team-slider__pics">
+            <div class="our-team-slider__pic" data-our-team-slider-index='0'>
+              <img src="img/our-team-slider1.png" alt="">
+            </div>
+            <div class="our-team-slider__pic _active" data-our-team-slider-index='1'>
+              <img src="img/our-team-slider1.png" alt="">
+            </div>
+            <div class="our-team-slider__pic" data-our-team-slider-index='2'>
+              <img src="img/our-team-slider1.png" alt="">
+            </div>
+          </div>
+
+          <div class="our-team-slider__text">
+            <div class="our-team-slider__item" data-our-team-slider-index='0'>
+              <h5>Sophie Turner </h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  iusto libero nesciunt quasi unde nostrum, dolorem tempora rerum aliquid sapiente exercitationem et magni molestias quam inventore voluptatum autem quos quia?</p>
+              <div class="links">
+                <a href="#"><img src="img/our-team-link1.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link2.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link3.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link4.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link5.png" alt=""></a>
+              </div>
+            </div>
+
+            <div class="our-team-slider__item _active" data-our-team-slider-index='1'>
+              <h5>Sophie Turner2</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam iusto libero nesciunt quasi unde nostrum, te exercitationem et magni molestias quam inventore voluptatum autem quos quia?</p>
+              <div class="links">
+                <a href="#"><img src="img/our-team-link1.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link2.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link3.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link4.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link5.png" alt=""></a>
+              </div>
+            </div>
+
+            <div class="our-team-slider__item" data-our-team-slider-index='2'>
+              <h5>Sophie Turner3</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  iusto libero nesciunt quasi unde nostrum, dolorem tempora rerum aliquid sapiente exercitationem et magni molestias quam inventore voluptatum autem quos quia?</p>
+              <div class="links">
+                <a href="#"><img src="img/our-team-link1.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link2.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link3.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link4.png" alt=""></a>
+                <a href="#"><img src="img/our-team-link5.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer  -->
+  <section class="contact section anchors-section" id="help">
+    <div class="container">
+      <div class="section-title contact__title">
+        <h3>Contact Us</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus tempora error odio omnis rerum quisquam!</p>
+      </div>
+
+      <form class="contact__form row">
+        <div class="contact__inputs">
+          <div class="contact__input">
+            <input type="text" placeholder="First Name" required class="iterable-input">
+          </div>
+          <div class="contact__input ">
+            <input type="text" placeholder="Last Name" required class="iterable-input">
+          </div>
+          <div class="contact__input">
+            <input type="email" placeholder="Email" required class="iterable-input">
+          </div>
+          <div class="contact__input ">
+            <input type="phone" placeholder="Phone" required class="iterable-input">
+          </div>
+        </div>
+        <div class="contact__textarea">
+          <textarea name="" id="" class="iterable-input" placeholder="Message"></textarea>
+        </div>
+        <div class="contact__controls">
+          <div class="contact__newsletter ">
+            <input class="form-check-input mt-0 iterable-input" type="checkbox" id="newsletter-inp" style="box-shadow: none;">
+           <label for="newsletter-inp iterable-input"> subscribe to the newsletter</label>
+          </div>
+          <div class="contact__send btnAnim">
+            <button type="submit" type="button">SEND</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- contact send Modal -->
+  <div class="modal fade" id="contact-send__modal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="#contact-send__modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Message has been sent!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn modal-close__footer" data-bs-dismiss="modal">ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- get answers from form -->
+<script>
+  let currentForm = document.querySelector('.footer__form');
+  
+
+  currentForm.onsubmit = (e) => {
+    e.preventDefault();
+    let formElems = document.querySelectorAll('.iterable-input');
+    let result = [];
+
+    for (let item of formElems) {
+      let answer;
+
+      if (item.type == 'checkbox') answer = item.checked;
+      else answer = item.value;
+
+      result.push(answer)
+    }
+
+     // reset values
+     currentForm.querySelectorAll('input').forEach(el => {
+        if (el.type == 'checkbox')el.checked = false;
+        else el.value = '';
+      })
+
+    console.log(result);
+
+    // show modal
+    var myModal = new bootstrap.Modal(document.getElementById('contact-send__modal'), {
+      keyboard: false
+    })
+
+    myModal.show();
+  }
+</script>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row footer__content">
+      <div class="col-md-6 col-sm-12 footer__left">
+        <div class="">
+          <img src="img/navbarLogo.png" alt="">
+        </div>
+
+        <div class="footer__helpful-links">
+          <a href='#' class="footer__helpful-link">Privecy Policy</a>
+          <a href='#' class="footer__helpful-link">About Us</a>
+          <a href='#' class="footer__helpful-link">About Us</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12 footer__right">
+          <ul class="footer-navbar-nav scrollspy-items">
+            <li class="footer-nav-item">
+              <a class="footer-nav-link scrollspy-item" href="#home">Home</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link scrollspy-item" href="#service">Service</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link scrollspy-item" href="#extension">Extension</a>
+            </li>
+            <li class="footer-nav-item">
+              <a class="footer-nav-link scrollspy-item" href="#pricing">Pricing</a>
+            </li>
+            <li class="footer-nav-item scrollspy-item">
+              <a class="footer-nav-link" href="#help">Help</a>
+            </li>
+          </ul>
+
+          <div class="footer__social-links">
+            <a href="#" class="footer__social-link">
+              <img src="img/our-team-link2.png" alt="">
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="img/our-team-link1.png" alt="">
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="img/our-team-link3.png" alt="">
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="img/our-team-link4.png" alt="">
+            </a>
+            <a href="#" class="footer__social-link">
+              <img src="img/our-team-link5.png" alt="">
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
